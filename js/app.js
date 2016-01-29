@@ -1,3 +1,8 @@
+//game tile values
+var tileWidth = 101;
+var tileHeight = 83;
+
+
 // Enemies our player must avoid
 var Enemy = function(x, y, speed) {
     // Variables applied to each of our instances go here,
@@ -67,16 +72,16 @@ Player.prototype.render = function() {
 Player.prototype.handleInput = function(key) {
     switch (key) {
             case 'left': 
-                this.x = this.x - 100;
+                this.x = this.x - tileWidth;
                 break;
             case 'up':
-                this.y = this.y - 100;
+                this.y = this.y - tileHeight;
                 break;
             case 'right':
-                this.x = this.x + 100;
+                this.x = this.x + tileWidth;
                 break;
             case 'down':
-                this.y = this.y + 100;
+                this.y = this.y + tileHeight;
                 break;
         }
 };
