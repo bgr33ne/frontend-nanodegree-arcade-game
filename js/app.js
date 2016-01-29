@@ -63,7 +63,7 @@ Player.prototype.update = function(dt) {
 Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
-
+//handles keyboard input for player movement
 Player.prototype.handleInput = function(key) {
     switch (key) {
             case 'left': 
@@ -93,7 +93,7 @@ Player.prototype.collide = function() {
         }
     }
 };
-//moves player to beginning
+//moves player position to beginning
 Player.prototype.reset = function() {
     this.x = 200;
     this.y = 400;
